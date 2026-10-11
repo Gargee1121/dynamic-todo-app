@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="todo-container">
+        <header class="todo-header">
+            <h1>📌 Task Manager</h1>
+            <p class="todo-subtitle">Organize your daily workflow efficiently</p>
+        </header>
+        
+        <!-- Task Creation Form -->
+        <form id="todo-form" autocomplete="off">
+            <div class="form-group">
+                <input type="text" id="todo-input" placeholder="What needs to be done?" required />
+            </div>
+            
+            <div class="form-row">
+                <select id="category-select" required>
+                    <option value="" disabled selected>Select Category</option>
+                    <option value="Personal">🏠 Personal</option>
+                    <option value="Work">💼 Work</option>
+                    <option value="Shopping">🛒 Shopping</option>
+                    <option value="Health">💪 Health</option>
+                </select>
+                
+                <button type="submit" id="add-btn">Add Task</button>
+            </div>
+        </form>
+
+        <!-- Dynamic Task List Wrapper -->
+        <main>
+            <ul id="todo-list">
+                <!-- JavaScript dynamic injection target -->
+            </ul>
+            <div id="empty-state" class="empty-state hidden">
+                Visual peace! No tasks remaining.
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
